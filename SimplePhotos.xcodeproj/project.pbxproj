@@ -11,6 +11,8 @@
 		06DD8BE62B55E84300251409 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD8BE52B55E84300251409 /* ContentView.swift */; };
 		06DD8BE82B55E84600251409 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06DD8BE72B55E84600251409 /* Assets.xcassets */; };
 		06DD8BEB2B55E84600251409 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06DD8BEA2B55E84600251409 /* Preview Assets.xcassets */; };
+		06DD8BF32B55E8E500251409 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD8BF22B55E8E500251409 /* Photo.swift */; };
+		06DD8BF52B55E90B00251409 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DD8BF42B55E90B00251409 /* ApiCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		06DD8BE72B55E84600251409 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06DD8BEA2B55E84600251409 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		06DD8BEC2B55E84600251409 /* SimplePhotos.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SimplePhotos.entitlements; sourceTree = "<group>"; };
+		06DD8BF22B55E8E500251409 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		06DD8BF42B55E90B00251409 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				06DD8BE32B55E84300251409 /* SimplePhotosApp.swift */,
 				06DD8BE52B55E84300251409 /* ContentView.swift */,
+				06DD8BF22B55E8E500251409 /* Photo.swift */,
+				06DD8BF42B55E90B00251409 /* ApiCall.swift */,
 				06DD8BE72B55E84600251409 /* Assets.xcassets */,
 				06DD8BEC2B55E84600251409 /* SimplePhotos.entitlements */,
 				06DD8BE92B55E84600251409 /* Preview Content */,
@@ -139,7 +145,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06DD8BF32B55E8E500251409 /* Photo.swift in Sources */,
 				06DD8BE62B55E84300251409 /* ContentView.swift in Sources */,
+				06DD8BF52B55E90B00251409 /* ApiCall.swift in Sources */,
 				06DD8BE42B55E84300251409 /* SimplePhotosApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
