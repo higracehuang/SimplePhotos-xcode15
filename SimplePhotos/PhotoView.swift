@@ -10,6 +10,8 @@ import SwiftUI
 struct PhotoView: View {
   var photoData: Photo
   
+  @State private var isOver = false
+  
   var body: some View {
     ZStack(alignment: .bottom) {
       AsyncImage(url: URL(string: photoData.thumbnailUrl)) { image in
@@ -20,11 +22,15 @@ struct PhotoView: View {
         Color.gray
       }.frame(width: 200, height: 200)
       
-      Text(photoData.title)
-        .padding(5)
-        .foregroundColor(.black)
-        .frame(width: 200)
-        .lineLimit(2)
+      if isOver {
+        Text(photoData.title)
+          .padding(5)
+          .foregroundColor(.black)
+          .frame(width: 200)
+          .lineLimit(2)
+      }
+    }.onHover { isOver in
+      self.isOver = isOver
     }
   }
 }
