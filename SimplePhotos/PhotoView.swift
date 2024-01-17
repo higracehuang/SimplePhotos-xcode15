@@ -1,10 +1,3 @@
-//
-//  PhotoView.swift
-//  SimplePhotos
-//
-//  Created by Le Huang on 1/15/24.
-//
-
 import SwiftUI
 
 struct PhotoView: View {
