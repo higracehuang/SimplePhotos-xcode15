@@ -8,15 +8,25 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+  @State var photos:[Photo] = []
+  
+  let columns = [GridItem](repeating: GridItem(.flexible()), count: 4)
+  
+  var body: some View {
+    ScrollView {
+      LazyVGrid(columns: columns) {
+        ForEach(photos, id: \.self) { photo in
+          PhotoView(photoData: photo)
         }
-        .padding()
-    }
+      }
+      .padding(.horizontal)
+      .onAppear {
+        ApiCall.getPhotos(completion: { photos in
+          self.photos = photos
+        })
+      }.padding()
+    }.frame(minWidth: 900, minHeight: 800)
+  }
 }
 
 #Preview {
