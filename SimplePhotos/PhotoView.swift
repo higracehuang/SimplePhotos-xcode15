@@ -13,24 +13,26 @@ struct PhotoView: View {
   @State private var isOver = false
   
   var body: some View {
-    ZStack(alignment: .bottom) {
-      AsyncImage(url: URL(string: photoData.thumbnailUrl)) { image in
-        image
-          .resizable()
-          .aspectRatio(contentMode: .fill)
-      } placeholder: {
-        Color.gray
-      }.frame(width: 200, height: 200)
-      
-      if isOver {
-        Text(photoData.title)
-          .padding(5)
-          .foregroundColor(.black)
-          .frame(width: 200)
-          .lineLimit(2)
+    Link(destination: URL(string: photoData.url)!) {
+      ZStack(alignment: .bottom) {
+        AsyncImage(url: URL(string: photoData.thumbnailUrl)) { image in
+          image
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+        } placeholder: {
+          Color.gray
+        }.frame(width: 200, height: 200)
+        
+        if isOver {
+          Text(photoData.title)
+            .padding(5)
+            .foregroundColor(.black)
+            .frame(width: 200)
+            .lineLimit(2)
+        }
+      }.onHover { isOver in
+        self.isOver = isOver
       }
-    }.onHover { isOver in
-      self.isOver = isOver
     }
   }
 }
